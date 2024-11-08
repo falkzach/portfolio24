@@ -1,3 +1,6 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub, faGoogle, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faFile } from '@fortawesome/free-regular-svg-icons'
 import argocdLogo from './assets/argocd.svg'
 import dotnetLogo from './assets/dotnet.svg'
 import kafkaLogo from './assets/kafka.png'
@@ -13,38 +16,38 @@ function App() {
             <div>
                 <p>Senior Software Engineer</p>
                 <p>Master&#39;s of Science in Computer Science</p>
-                <p>
-                    <a href="https://github.com/falkzach" target="_blank">
-                        <span className="fa fa-github btn-secondary"></span>GitHub
+                <div>
+                    <a className="contact-link" href="https://github.com/falkzach" rel="noopener noreferrer" target="_blank">
+                        <FontAwesomeIcon icon={faGithub} /> GitHub
                     </a>
-                    <a href="mailto:falkzach+portfolio@gmail.com" target="_blank">
-                        <span className="fa fa-google"></span>Gmail
+                    <a className="contact-link" href="mailto:falkzach+portfolio@gmail.com" rel="noopener noreferrer" target="_blank">
+                        <FontAwesomeIcon icon={faGoogle} /> Gmail
                     </a>
-                    <a href="https://www.linkedin.com/in/falkzach" target="_blank">
-                        <span className="fa fa-linkedin"></span>LinkedIn
+                    <a className="contact-link" href="https://www.linkedin.com/in/falkzach" rel="noopener noreferrer" target="_blank">
+                        <FontAwesomeIcon icon={faLinkedin} /> LinkedIn
                     </a>
-                    <a href="https://www.linkedin.com/in/falkzach" target="_blank">
-                        <span className="fa fa-linkedin"></span>Resume
+                    <a className="contact-link" href="https://www.linkedin.com/in/falkzach" rel="noopener noreferrer" target="_blank">
+                        <FontAwesomeIcon icon={faFile} /> Resume
                     </a>
-                </p>
+                </div>
                 <h2>Full stack, polyglot, cloud native practitioner</h2>
                 <div>
-                    <a href="https://kafka.apache.org" target="_blank">
+                    <a href="https://kafka.apache.org" rel="noopener noreferrer" target="_blank">
                         <img src={kafkaLogo} className="logo kafka" alt="Kafka logo"/>
                     </a>
-                    <a href="https://dotnet.microsoft.com" target="_blank">
+                    <a href="https://dotnet.microsoft.com" rel="noopener noreferrer" target="_blank">
                         <img src={dotnetLogo} className="logo dotnet" alt="dotnet logo"/>
                     </a>
-                    <a href="https://kubernetes.io" target="_blank">
+                    <a href="https://kubernetes.io" rel="noopener noreferrer" target="_blank">
                         <img src={kubernetesLogo} className="logo kubernetes" alt="Kubernetes logo"/>
                     </a>
-                    <a href="https://argo-cd.readthedocs.io" target="_blank">
+                    <a href="https://argo-cd.readthedocs.io" rel="noopener noreferrer" target="_blank">
                         <img src={argocdLogo} className="logo argocd" alt="Argo CD logo"/>
                     </a>
-                    <a href="https://react.dev" target="_blank">
+                    <a href="https://react.dev" rel="noopener noreferrer" target="_blank">
                         <img src={reactLogo} className="logo react" alt="React logo"/>
                     </a>
-                    <a href="https://vite.dev" target="_blank">
+                    <a href="https://vite.dev" rel="noopener noreferrer" target="_blank">
                         <img src={viteLogo} className="logo" alt="Vite logo"/>
                     </a>
                 </div>
