@@ -1,0 +1,8 @@
+version: '3'
+services:
+
+  vite:
+    container_name: vite-react
+    build: .
+    ports:
+      - 80:8080
