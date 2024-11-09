@@ -18,8 +18,14 @@ npm install
 npm run dev
 ```
 
-Deploy on a server, run with no hangups, logs and errors to `log.txt`
+Upload to server
+```bash
+./upload.sh
+```
+
+Run on the deploy server, no hangups, logs and errors to `log.txt`
 ```bash
 ./init-certbot.sh
+docker stop portfolio24
 nohup docker compose --profile deployed up > log.txt 2>&1 &
 ```
