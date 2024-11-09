@@ -1,8 +1,25 @@
-# React + Vite
+# portfolio24 - [falkzach.net](falkzach.net)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An updated portfolio site for 2024, built on vite + react
 
-Currently, two official plugins are available:
+Lazily deployed with docker compose
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+With automated lets encrypt cert
+
+Run it in a container locally
+```bash
+docker compose --profile local up
+```
+
+Develop locally with SWC
+```bash
+nvm use
+npm install
+npm run dev
+```
+
+Deploy on a server, run with no hangups, logs and errors to `log.txt`
+```bash
+./init-certbot.sh
+nohup docker compose --profile deployed up > log.txt 2>&1 &
+```
