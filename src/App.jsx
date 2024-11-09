@@ -56,6 +56,12 @@ function App() {
                     </a>
                 </div>
             </div>
+            <div className="viewSource">
+                <a href="https://github.com/falkzach/portfolio24" rel="noopener noreferrer"
+                   target="_blank">
+                    <FontAwesomeIcon icon={faGithub} size={"2xl"} /> view on github
+                </a>
+            </div>
 
         </>
     )

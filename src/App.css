@@ -45,3 +45,10 @@
   padding-right: 1.0rem;
   white-space: nowrap;
 }
+
+.viewSource {
+  position: absolute;
+  padding: 0.5rem;
+  top: 0;
+  right: 0;
+}
