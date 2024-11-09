@@ -29,7 +29,7 @@ function App() {
                         <a className="contact-link" href="https://www.linkedin.com/in/falkzach" rel="noopener noreferrer" target="_blank">
                             <FontAwesomeIcon icon={faLinkedin} /> LinkedIn
                         </a>
-                        <a className="contact-link" href="https://www.linkedin.com/in/falkzach" rel="noopener noreferrer" target="_blank">
+                        <a className="contact-link" href="https://drive.google.com/file/d/1VSHs7HzeVQL3vXwvLXZxCle6j4OrHAar/view" rel="noopener noreferrer" target="_blank">
                             <FontAwesomeIcon icon={faFile} /> Resume
                         </a>
                     </span>
