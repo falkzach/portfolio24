@@ -29,4 +29,4 @@ RUN rm -rf ./*
 
 COPY --from=build --chown=nginx:nginx /app/dist .
 
-COPY --chown=nginx:nginx ./nginx/spa.conf /etc/nginx/conf.d/default.conf
+COPY --chown=nginx:nginx nginx/spa.conf /etc/nginx/conf.d/default.conf

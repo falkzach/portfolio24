@@ -1,5 +1,5 @@
 services:
-
+  # portfolio24 will only work on a deployed server after successfully running init-certbot.sh
   portfolio24:
     container_name: portfolio-24
     build: .
@@ -10,9 +10,23 @@ services:
     volumes:
       - ./certbot/conf:/etc/letsencrypt
       - ./certbot/www:/var/www/certbot
+      - ./nginx/spa-ssl.conf:/etc/nginx/conf.d/default.conf
+      - ./certbot/www:/var/www/certbot
+    profiles:
+      - deployed
   certbot:
     image: certbot/certbot
     entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
     volumes:
       - ./certbot/conf:/etc/letsencrypt
       - ./certbot/www:/var/www/certbot
+    profiles:
+      - deployed
+  # use portfolio24-local for local testing
+  portfolio24-local:
+    container_name: portfolio-24-local
+    build: .
+    ports:
+      - 80:8080
+    profiles:
+      - local

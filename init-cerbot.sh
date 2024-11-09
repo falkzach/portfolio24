@@ -8,16 +8,8 @@ fi
 domains=(falkzach.net www.falkzach.net)
 rsa_key_size=4096
 data_path="./certbot"
-email="falkzach+letsencrypt@gmail.com" # Adding a valid address is strongly recommended
-staging=0 # Set to 1 if you're testing your setup to avoid hitting request limits
-
-if [ -d "$data_path" ]; then
-  read -p "Existing data found for $domains. Continue and replace existing certificate? (y/N) " decision
-#  TODO: copy to .bak and continue
-  if [ "$decision" != "Y" ] && [ "$decision" != "y" ]; then
-    exit
-  fi
-fi
+email="falkzach+letsencrypt@gmail.com"
+staging=0 # Set to 1 if you're testing your setup to avoid hitting request limits, 5 failed in 1 hour
 
 
 if [ ! -e "$data_path/conf/options-ssl-nginx.conf" ] || [ ! -e "$data_path/conf/ssl-dhparams.pem" ]; then
@@ -38,7 +30,7 @@ docker compose run --rm --entrypoint "\
     -subj '/CN=localhost'" certbot
 echo
 
-# TODO: fix this, cer things being owned by root
+# TODO: fix this, certs owned by root --user 1000:1000 on docker compose run?
 sudo chown -R ansible:ansible ./certbot
 
 echo "### Starting portfolio24 ..."
@@ -80,4 +72,4 @@ docker compose run --rm --entrypoint "\
 echo
 
 echo "### Reloading nginx ..."
-docker compose exec nginx nginx -s reload
+docker compose exec portfolio24 nginx -s reload
