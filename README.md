@@ -15,7 +15,7 @@ Develop locally with SWC
 ```bash
 nvm use
 npm install
-node run dev
+npm run dev
 ```
 
 Upload to server
