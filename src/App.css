@@ -42,5 +42,6 @@
 }
 
 .contact-link {
-  padding-right: 0.8rem;
+  padding-right: 1.0rem;
+  white-space: nowrap;
 }
