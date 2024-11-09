@@ -1,8 +1,18 @@
 version: '3'
 services:
 
-  vite:
-    container_name: vite-react
+  portfolio24:
+    container_name: portfolio-24
     build: .
     ports:
       - 80:8080
+      - 443:8443
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+      - ./certbot/conf:/etc/letsencrypt
+      - ./certbot/www:/var/www/certbot
+  certbot:
+    image: certbot/certbot
+    volumes:
+      - ./certbot/conf:/etc/letsencrypt
+      - ./certbot/www:/var/www/certbot

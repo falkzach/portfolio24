@@ -17,18 +17,22 @@ function App() {
                 <p>Senior Software Engineer</p>
                 <p>Master&#39;s of Science in Computer Science</p>
                 <div>
-                    <a className="contact-link" href="https://github.com/falkzach" rel="noopener noreferrer" target="_blank">
-                        <FontAwesomeIcon icon={faGithub} /> GitHub
-                    </a>
-                    <a className="contact-link" href="mailto:falkzach+portfolio@gmail.com" rel="noopener noreferrer" target="_blank">
-                        <FontAwesomeIcon icon={faGoogle} /> Gmail
-                    </a>
-                    <a className="contact-link" href="https://www.linkedin.com/in/falkzach" rel="noopener noreferrer" target="_blank">
-                        <FontAwesomeIcon icon={faLinkedin} /> LinkedIn
-                    </a>
-                    <a className="contact-link" href="https://www.linkedin.com/in/falkzach" rel="noopener noreferrer" target="_blank">
-                        <FontAwesomeIcon icon={faFile} /> Resume
-                    </a>
+                    <span>
+                        <a className="contact-link" href="https://github.com/falkzach" rel="noopener noreferrer" target="_blank">
+                            <FontAwesomeIcon icon={faGithub} /> GitHub
+                        </a>
+                        <a className="contact-link" href="mailto:falkzach+portfolio@gmail.com" rel="noopener noreferrer" target="_blank">
+                            <FontAwesomeIcon icon={faGoogle} /> Gmail
+                        </a>
+                    </span>
+                    <span>
+                        <a className="contact-link" href="https://www.linkedin.com/in/falkzach" rel="noopener noreferrer" target="_blank">
+                            <FontAwesomeIcon icon={faLinkedin} /> LinkedIn
+                        </a>
+                        <a className="contact-link" href="https://www.linkedin.com/in/falkzach" rel="noopener noreferrer" target="_blank">
+                            <FontAwesomeIcon icon={faFile} /> Resume
+                        </a>
+                    </span>
                 </div>
                 <h2>Full stack, polyglot, cloud native practitioner</h2>
                 <div>
