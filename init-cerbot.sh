@@ -38,9 +38,11 @@ docker compose run --rm --entrypoint "\
     -subj '/CN=localhost'" certbot
 echo
 
+# TODO: fix this, cer things being owned by root
+sudo chown -R ansible:ansible ./certbot
 
-echo "### Starting nginx ..."
-docker compose up --force-recreate -d nginx
+echo "### Starting portfolio24 ..."
+docker compose up --force-recreate -d portfolio24
 echo
 
 echo "### Deleting dummy certificate for $domains ..."
